@@ -32,6 +32,6 @@ THEN the saved events persist
 
 ### Notes
 
->1. Using Momment.js to work with date and time
+>1. Using [Moment.js](https://momentjs.com/) to work with date and time
 >2. CSS is powered by JQuery
 >3. HTML is dynamically updated
