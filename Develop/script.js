@@ -1,7 +1,7 @@
 // saving to local storage
 var dateEl = document.getElementById("currentDay");
-var Tasks = document.querySelector("plan");
-var TB = document.getElementsByClassName("description")
+// var Tasks = document.querySelector("plan");
+// var TB = document.getElementsByClassName("description")
 
 // Retrieves Day and time and adds it to top of the page
 function TimeUpdate () {
@@ -12,28 +12,48 @@ function TimeUpdate () {
 }
 setInterval(TimeUpdate, 1000);
 
-console.log(TB);
-// checks the time and assigns to styling
-function Check() {
-    var day_time = moment().format("hh:mm"); // Grabs the time of day
-    console.log(day_time);
-    if (day_time == TB.id) { // compare time of day to TB.id Value
-        TB.classList.remove("past"); // removes default styling
-        TB.classList.add("present"); // assigns present
-        console.log(TB);
-        console.id(TB.id);
-    } else if (day_time < TB.id ) { // if not present, then: 
-        TB.classList.remove("past"); // removes default styling
-        TB.classList.remove("present"); // removes present if not applicable
-        TB.classList.add("future"); // assigns present default
-    } else {
-        TB.classList.add("past")
+
+$(".saveBtn").click(function (e) {
+    e.preventDefault();
+    var save = $(this).siblings(".description").val();
+    console.log(save);
+    var ID_hour = $(this).parent().attr("id");
+    console.log(ID_hour);
+    localStorage.setItem(ID_hour, save);
+});
+
+$("#time-5-a .description").val(localStorage.getItem("time-5-a"));
+$("#time-6-a .description").val(localStorage.getItem("time-6-a"));
+$("#time-7-a .description").val(localStorage.getItem("time-7-a"));
+$("#time-9-a .description").val(localStorage.getItem("time-9-a"));
+$("#time-10-a .description").val(localStorage.getItem("time-10-a"));
+$("#time-11-a .description").val(localStorage.getItem("time-11-a"));
+$("#time-12-p .description").val(localStorage.getItem("time-12-p"));
+$("#time-1-p .description").val(localStorage.getItem("time-1-p"));
+$("#time-2-p .description").val(localStorage.getItem("time-2-p"));
+$("#time-3-p .description").val(localStorage.getItem("time-3-p"));
+$("#time-4-p .description").val(localStorage.getItem("time-4-p"));
+$("#time-5-p .description").val(localStorage.getItem("time-5-p"));
+$("#time-6-p .description").val(localStorage.getItem("time-6-p"));
+$("#time-7-p .description").val(localStorage.getItem("time-7-p"));
+$("#time-8-p .description").val(localStorage.getItem("time-8-p"));
+$("#time-9-p .description").val(localStorage.getItem("time-9-p"));
+$("#time-10-p .description").val(localStorage.getItem("time-10-p"));
+$("#time-11-p .description").val(localStorage.getItem("time-11-p"));
+$("#time-12-a .description").val(localStorage.getItem("time-12-a"));
+
+
+var currentT = moment().format("hh:mm");
+var T = document.querySelector(".Time");
+
+
+function creation() {
+    var Time = parseInt(T);
+    if (currentT === Time) {
+        $("#planner .description").addClass("present");
+    } else if (currentT > Time) {
+        $("#planner .description").addClass("past");
+    } else if (currentT < Time) {
+        $("#planner .description").addClass("future");
     }
-    
-
-};
-
-
-
-// class.classList.remove(past)
-// class.classList.add(present)
+}
