@@ -8,7 +8,7 @@ body {
 
 /* Referenced */
 textarea {
-  background: rgb(98, 118, 129);
+  background: transparent;
   border: none;
   resize: none;
   color: #000000;
