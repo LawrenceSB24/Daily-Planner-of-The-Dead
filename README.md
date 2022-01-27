@@ -40,10 +40,12 @@ The planner works as thus:
 The user inputs their task in the text area of the given time sections. Once written, the user will hit the save button so that their task will remain in the given time slot until the user deletes it. This is only a basic planner, so there is no dynamic features that saves the task for a certain time period using a calendar.
 
 The layout of the application:
-![Website layout](./Images/Daily-planner-application-screenshot.png)
+![Website layout](./Images/Deployed-application-screenshot.png)
 
 ### Notes
 
 >1. Using [Moment.js](https://momentjs.com/) to work with date and time
 >2. CSS is powered by JQuery
 >3. HTML is dynamically updated
+
+### Link to deployed application: https://lawrencesb24.github.io/Daily-Planner-of-The-Dead/
