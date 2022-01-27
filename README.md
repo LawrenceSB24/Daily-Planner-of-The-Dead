@@ -1,6 +1,6 @@
 # Daily-Planner-of-The-Dead
 
-## Basic jest of task
+## Basic jest of the task
 Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code.
 
 ## User Story
@@ -29,6 +29,18 @@ THEN the text for that event is saved in local storage
 WHEN I refresh the page
 THEN the saved events persist
 ```
+
+## Functionality
+
+The planner works as thus:
+>1. There is a dynamic time and date above the planner sections that updates accordingly
+>2. Each section of the planner will automatically update itself based on the time
+>3. Any tasks that are saved to the planner will be saved and stored to the planner until the user changes the task
+
+The user inputs their task in the text area of the given time sections. Once written, the user will hit the save button so that their task will remain in the given time slot until the user deletes it. This is only a basic planner, so there is no dynamic features that saves the task for a certain time period using a calendar.
+
+The layout of the application:
+![Website layout](./Images/Daily-planner-application-screenshot.png)
 
 ### Notes
 
