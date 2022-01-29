@@ -49,3 +49,4 @@ The layout of the application:
 >3. HTML is dynamically updated
 
 ### Link to deployed application: https://lawrencesb24.github.io/Daily-Planner-of-The-Dead/
+## Additional note: So while the user can type in their task into the time-block, there is still an error with saving the task so that when the user re-loads the page then the task they had saved is still there until they delete the task, type in another, and save the new task.
